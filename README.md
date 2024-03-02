@@ -5,8 +5,7 @@
 🚀A Jetpack Compose utility library for  
 _Made with ❤️ for Android Developers and Composers_ 
 
- 
-![Shimmerfy](screenshot/shimmer.gif) 
+ <img src="screenshot/shimmer.gif" width="250" height="30%"/>
 
 
 ## 💡Introduction 

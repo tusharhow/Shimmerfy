@@ -34,7 +34,6 @@ class MainActivity : ComponentActivity() {
                                     .height(100.dp)
                                     .clip(RoundedCornerShape(8)),
 
-
                             )
                           }
                      }

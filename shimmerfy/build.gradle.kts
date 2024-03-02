@@ -1,7 +1,7 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.android.kotlin)
-    id ("maven-publish")
+    id("com.vanniktech.maven.publish")
 }
 
 android {
@@ -67,7 +67,7 @@ afterEvaluate {
                 from(components["release"])
                 groupId = "com.tmahmudev.shimmerfy"
                 artifactId = "shimmerfy"
-                version = "1.0.0"
+                version = "1.0.1"
             }
         }
     }
