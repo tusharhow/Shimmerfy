@@ -1,7 +1,9 @@
+import org.apache.http.entity.ContentType.create
+
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.android.kotlin)
-    id("com.vanniktech.maven.publish")
+
 }
 
 android {
@@ -60,15 +62,4 @@ dependencies {
     androidTestImplementation(libs.espresso.core)
 }
 
-afterEvaluate {
-    publishing {
-        publications {
-            create<MavenPublication>("release") {
-                from(components["release"])
-                groupId = "com.tmahmudev.shimmerfy"
-                artifactId = "shimmerfy"
-                version = "1.0.1"
-            }
-        }
-    }
-}
+
