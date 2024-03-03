@@ -1,22 +1,18 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
+import org.jetbrains.dokka.gradle.DokkaMultiModuleTask
+
 plugins {
-    alias(libs.plugins.android.application) apply false
-    alias(libs.plugins.android.kotlin) apply false
-    alias(libs.plugins.android.library) apply false
-
+    alias(libs.plugins.androidApplication).apply(false)
+    alias(libs.plugins.androidLibrary).apply(false)
+    alias(libs.plugins.kotlinAndroid).apply(false)
+    alias(libs.plugins.publish).apply(false)
+    alias(libs.plugins.dokka)
+    alias(libs.plugins.ktlint)
 }
 
-
-buildscript {
-
-    repositories {
-        google()
-        mavenCentral()
-    }
-    dependencies {
-        classpath ("com.android.tools.build:gradle:8.2.2")
-        classpath ("org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.22")
-    }
+tasks.withType<DokkaMultiModuleTask>().configureEach {
+    outputDirectory.set(projectDir.resolve("docs/api"))
 }
 
-
+subprojects {
+    apply(plugin = "org.jlleitschuh.gradle.ktlint")
+}
