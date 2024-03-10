@@ -22,7 +22,7 @@ In `build.gradle` of app module, include this dependency
 
 ```gradle
 dependencies {
-    implementation ("com.tmahmudev.shimmerfy:shimmerfy:1.0.5")
+    implementation ("com.github.tusharhow:Shimmerfy:1.0.5")
 }
 ```
 
